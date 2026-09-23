@@ -44,20 +44,55 @@
         <option value="araucania">Araucanía</option>
         <option value="los lagos">Los Lagos</option>
         <option value="magallanes">Magallanes</option>
+      </select>
         <br>
         <br>
         <h2>Información académica</h2>
-    <label>Nivel educacional:</label><br>
-    <input type="radio" id="media" name="nivel_educacional" value="media">
-    <label for="media">Enseñanza Media</label><br>
-    <input type="radio" id="tecnico" name="nivel_educacional" value="tecnico">
-    <label for="tecnico">Técnico</label><br>
-    <input type="radio" id="universitario" name="nivel_educacional" value="universitario">
-    <label for="universitario">Universitario</label><br>
-    <input type="radio" id="otro" name="nivel_educacional" value="otro">
-    <label for="otro">Otro</label>
-    <br>
-    <br>
-    </form>
+<label>Nivel educacional:</label>
+<br>
+<br>
+<input type="radio" id="media" name="nivel_educacional" value="media">
+<label for="media">Enseñanza Media</label>
+<br>
+<input type="radio" id="tecnico" name="nivel_educacional" value="tecnico">
+<label for="tecnico">Técnico</label>
+<br>
+<input type="radio" id="universitario" name="nivel_educacional" value="universitario">
+<label for="universitario">Universitario</label>
+<br>
+<input type="radio" id="otro" name="nivel_educacional" value="otro">
+<label for="otro">Otro</label>
+<br>
+<br>
+<label for="carrera">Carrera de interés:</label>
+<select id="carrera" name="carrera">
+  <option value="">Seleccione una carrera</option>
+  <option value="informatica">Técnico Universitario en Informática</option>
+  <option value="veterinaria">Medicina Veterinaria</option>
+  <option value="psicologia">Psicología</option>
+</select>
+<br>
+<br>
+<h2>Áreas de Interés</h2>
+<input type="checkbox" id="deportes" name="areas_interes" value="deportes">
+<label for="deportes">Deportes</label>
+<br>
+<input type="checkbox" id="arte" name="areas_interes" value="arte">
+<label for="arte">Arte</label>
+<br>
+<input type="checkbox" id="musica" name="areas_interes" value="musica">
+<label for="musica">Música</label>
+<br>
+<input type="checkbox" id="lectura" name="areas_interes" value="lectura">
+<label for="lectura">Lectura</label>
+<br>
+<br>
+<label for="mensaje_u_observaciones">Mensaje u Observaciones:</label>
+<br>
+<textarea id="mensaje_u_observaciones" name="Mensaje_U_Observaciones"></textarea>
+<br>
+<br>
+<button type="submit">Enviar formulario</button>
+</form>
     </nav>
     
