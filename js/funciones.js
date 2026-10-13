@@ -19,5 +19,16 @@ function restaDosNumeros(){
     let resta = num1 - num2;
     return resta;
 }
-
+function multiplicaDosNumeros(){
+    let num1 = 5;
+    let num2 = 10;
+    let multiplicacion = num1 * num2;
+    return multiplicacion;
+}
+function divideDosNumeros(){
+    let num1 = 10;
+    let num2 = 5;
+    let division = num1 / num2;
+    return division;
+}
 
