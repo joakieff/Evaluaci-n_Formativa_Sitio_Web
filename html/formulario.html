@@ -22,7 +22,7 @@
             <li><a href="ejemplosJS.html">Ejemplos de JS</a></li>
         </ul>
         <h2>Datos Personales</h2>
-      <form action="" method="get">
+      <form id="miFormulario" action="" method="get">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required>
       <label for="apellido">Apellido:</label>
@@ -97,4 +97,34 @@
 <button type="submit">Enviar formulario</button>
 </form>
     </nav>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $("#miFormulario").submit(function(event) {
+            var esValido = true;
+            
+            var nombre = $("#nombre").val().trim();
+            var apellido = $("#apellido").val().trim();
+            var mensaje = $("#mensaje_u_observaciones").val().trim();
+
+            if (nombre === "") {
+                alert("El campo Nombre no puede estar vacío.");
+                esValido = false;
+            } else if (apellido === "") {
+                alert("El campo Apellido no puede estar vacío.");
+                esValido = false;
+            } else if (mensaje === "") {
+                alert("Por favor, ingresa un Mensaje u Observaciones.");
+                esValido = false;
+            }
+
+            if (esValido === false) {
+                event.preventDefault();
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>
