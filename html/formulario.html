@@ -22,23 +22,38 @@
             <li><a href="ejemplosJS.html">Ejemplos de JS</a></li>
         </ul>
         <h2>Datos Personales</h2>
-      <form id="miFormulario" action="" method="get">
+ <form id="miFormulario" action="" method="get">
+      
+      
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <input type="text" id="nombre" name="nombre">
+      <span id="error-nombre" class="error-msg" style="color: red; display: none; font-size: 14px;">El nombre es obligatorio.</span>
+      <br><br>
+
+      
       <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" required>
-      <br>
-      <br>
+      <input type="text" id="apellido" name="apellido">
+      <span id="error-apellido" class="error-msg" style="color: red; display: none; font-size: 14px;">El apellido es obligatorio.</span>
+      <br><br>
+      
+      
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email">
+      <span id="error-email" class="error-msg" style="color: red; display: none; font-size: 14px;">El email es obligatorio.</span>
+      
       <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" required>
-      <br>
-      <br>
+      <input type="tel" id="telefono" name="telefono">
+      <span id="error-telefono" class="error-msg" style="color: red; display: none; font-size: 14px;">El teléfono es obligatorio.</span>
+      <br><br>
+      
+      
       <label for="fecha">Fecha de Nacimiento:</label>
-      <input type="date" id="fecha" name="fecha" required>
+      <input type="date" id="fecha" name="fecha">
+      <span id="error-fecha" class="error-msg" style="color: red; display: none; font-size: 14px;">La fecha es obligatoria.</span>
+      
+     
       <label for="region">Región:</label>
-      <select id="region" name="region" required>
+      <select id="region" name="region">
         <option value="">Seleccione una región</option>
         <option value="metropolitana">Metropolitana</option>
         <option value="valparaiso">Valparaíso</option>
@@ -47,75 +62,112 @@
         <option value="los lagos">Los Lagos</option>
         <option value="magallanes">Magallanes</option>
       </select>
-        <br>
-        <br>
-        <h2>Información académica</h2>
-<label>Nivel educacional:</label>
-<br>
-<br>
-<input type="radio" id="media" name="nivel_educacional" value="media">
-<label for="media">Enseñanza Media</label>
-<br>
-<input type="radio" id="tecnico" name="nivel_educacional" value="tecnico">
-<label for="tecnico">Técnico</label>
-<br>
-<input type="radio" id="universitario" name="nivel_educacional" value="universitario">
-<label for="universitario">Universitario</label>
-<br>
-<input type="radio" id="otro" name="nivel_educacional" value="otro">
-<label for="otro">Otro</label>
-<br>
-<br>
-<label for="carrera">Carrera de interés:</label>
-<select id="carrera" name="carrera">
-  <option value="">Seleccione una carrera</option>
-  <option value="informatica">Técnico Universitario en Informática</option>
-  <option value="veterinaria">Medicina Veterinaria</option>
-  <option value="psicologia">Psicología</option>
-</select>
-<br>
-<br>
-<h2>Áreas de Interés</h2>
-<input type="checkbox" id="deportes" name="areas_interes" value="deportes">
-<label for="deportes">Deportes</label>
-<br>
-<input type="checkbox" id="arte" name="areas_interes" value="arte">
-<label for="arte">Arte</label>
-<br>
-<input type="checkbox" id="musica" name="areas_interes" value="musica">
-<label for="musica">Música</label>
-<br>
-<input type="checkbox" id="lectura" name="areas_interes" value="lectura">
-<label for="lectura">Lectura</label>
-<br>
-<br>
-<label for="mensaje_u_observaciones">Mensaje u Observaciones:</label>
-<br>
-<textarea id="mensaje_u_observaciones" name="Mensaje_U_Observaciones"></textarea>
-<br>
-<br>
-<button type="submit">Enviar formulario</button>
-</form>
-    </nav>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <span id="error-region" class="error-msg" style="color: red; display: none; font-size: 14px;">Seleccione una región.</span>
+      <br><br>
 
+    
+      <h2>Información académica</h2>
+      <label>Nivel educacional:</label><br><br>
+      <input type="radio" id="media" name="nivel_educacional" value="media">
+      <label for="media">Enseñanza Media</label><br>
+      <input type="radio" id="tecnico" name="nivel_educacional" value="tecnico">
+      <label for="tecnico">Técnico</label><br>
+      <input type="radio" id="universitario" name="nivel_educacional" value="universitario">
+      <label for="universitario">Universitario</label><br>
+      <input type="radio" id="otro" name="nivel_educacional" value="otro">
+      <label for="otro">Otro</label><br>
+      <span id="error-nivel" class="error-msg" style="color: red; display: none; font-size: 14px;">Seleccione su nivel educacional.</span>
+      <br><br>
+
+      
+      <label for="carrera">Carrera de interés:</label>
+      <select id="carrera" name="carrera">
+        <option value="">Seleccione una carrera</option>
+        <option value="informatica">Técnico Universitario en Informática</option>
+        <option value="veterinaria">Medicina Veterinaria</option>
+        <option value="psicologia">Psicología</option>
+      </select>
+      <span id="error-carrera" class="error-msg" style="color: red; display: none; font-size: 14px;">Seleccione una carrera.</span>
+      <br><br>
+
+      
+      <h2>Áreas de Interés</h2>
+      <input type="checkbox" id="deportes" name="areas_interes" value="deportes">
+      <label for="deportes">Deportes</label><br>
+      <input type="checkbox" id="arte" name="areas_interes" value="arte">
+      <label for="arte">Arte</label><br>
+      <input type="checkbox" id="musica" name="areas_interes" value="musica">
+      <label for="musica">Música</label><br>
+      <input type="checkbox" id="lectura" name="areas_interes" value="lectura">
+      <label for="lectura">Lectura</label><br>
+      <span id="error-areas" class="error-msg" style="color: red; display: none; font-size: 14px;">Seleccione al menos un área de interés.</span>
+      <br><br>
+
+    
+      <label for="mensaje_u_observaciones">Mensaje u Observaciones:</label><br>
+      <textarea id="mensaje_u_observaciones" name="Mensaje_U_Observaciones"></textarea><br>
+      <span id="error-mensaje" class="error-msg" style="color: red; display: none; font-size: 14px;">Debes ingresar una observación.</span>
+      <br><br>
+      
+      <button type="submit">Enviar formulario</button>
+      </form>
+    </nav>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
     <script>
     $(document).ready(function() {
         $("#miFormulario").submit(function(event) {
             var esValido = true;
             
-            var nombre = $("#nombre").val().trim();
-            var apellido = $("#apellido").val().trim();
-            var mensaje = $("#mensaje_u_observaciones").val().trim();
+           
+            $(".error-msg").hide();
+            
+        
+            if ($("#nombre").val().trim() === "") {
+                $("#error-nombre").show();
+                esValido = false;
+            } 
+            if ($("#apellido").val().trim() === "") {
+                $("#error-apellido").show();
+                esValido = false;
+            } 
+            if ($("#email").val().trim() === "") {
+                $("#error-email").show();
+                esValido = false;
+            }
+            if ($("#telefono").val().trim() === "") {
+                $("#error-telefono").show();
+                esValido = false;
+            }
+            if ($("#fecha").val() === "") {
+                $("#error-fecha").show();
+                esValido = false;
+            }
+            if ($("#mensaje_u_observaciones").val().trim() === "") {
+                $("#error-mensaje").show();
+                esValido = false;
+            }
 
-            if (nombre === "") {
-                alert("El campo Nombre no puede estar vacío.");
+           
+            if ($("#region").val() === "") {
+                $("#error-region").show();
                 esValido = false;
-            } else if (apellido === "") {
-                alert("El campo Apellido no puede estar vacío.");
+            }
+            if ($("#carrera").val() === "") {
+                $("#error-carrera").show();
                 esValido = false;
-            } else if (mensaje === "") {
-                alert("Por favor, ingresa un Mensaje u Observaciones.");
+            }
+
+       
+            if (!$("input[name='nivel_educacional']:checked").val()) {
+                $("#error-nivel").show();
+                esValido = false;
+            }
+
+         
+            if ($("input[name='areas_interes']:checked").length === 0) {
+                $("#error-areas").show();
                 esValido = false;
             }
 
@@ -125,6 +177,5 @@
         });
     });
     </script>
-
 </body>
 </html>
