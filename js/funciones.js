@@ -39,3 +39,63 @@ function divideDosNumeros(){
     return division;
 }
 
+$(document).ready(function() {
+        $("#miFormulario").submit(function(event) {
+            var esValido = true;
+            
+           
+            $(".error-msg").hide();
+            
+        
+            if ($("#nombre").val().trim() === "") {
+                $("#error-nombre").show();
+                esValido = false;
+            } 
+            if ($("#apellido").val().trim() === "") {
+                $("#error-apellido").show();
+                esValido = false;
+            } 
+            if ($("#email").val().trim() === "") {
+                $("#error-email").show();
+                esValido = false;
+            }
+            if ($("#telefono").val().trim() === "") {
+                $("#error-telefono").show();
+                esValido = false;
+            }
+            if ($("#fecha").val() === "") {
+                $("#error-fecha").show();
+                esValido = false;
+            }
+            if ($("#mensaje_u_observaciones").val().trim() === "") {
+                $("#error-mensaje").show();
+                esValido = false;
+            }
+
+           
+            if ($("#region").val() === "") {
+                $("#error-region").show();
+                esValido = false;
+            }
+            if ($("#carrera").val() === "") {
+                $("#error-carrera").show();
+                esValido = false;
+            }
+
+       
+            if (!$("input[name='nivel_educacional']:checked").val()) {
+                $("#error-nivel").show();
+                esValido = false;
+            }
+
+         
+            if ($("input[name='areas_interes']:checked").length === 0) {
+                $("#error-areas").show();
+                esValido = false;
+            }
+
+            if (esValido === false) {
+                event.preventDefault();
+            }
+        });
+    });
