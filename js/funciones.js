@@ -8,27 +8,34 @@ function apagarAmpolleta() {
             document.getElementById("imgPrendida").style.display = "block";
         }
 function sumaDosNumeros(){
-    let num1 = 5;
-    let num2 = 10;
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
     let suma = num1 + num2;
+    document.getElementById("resultado").innerText = suma;
     return suma;
 }
+
 function restaDosNumeros(){
-    let num1 = 10;
-    let num2 = 5;
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
     let resta = num1 - num2;
+    document.getElementById("resultado").innerText = resta;
     return resta;
 }
+
 function multiplicaDosNumeros(){
-    let num1 = 5;
-    let num2 = 10;
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
     let multiplicacion = num1 * num2;
+    document.getElementById("resultado").innerText = multiplicacion;
     return multiplicacion;
 }
+
 function divideDosNumeros(){
-    let num1 = 10;
-    let num2 = 5;
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
     let division = num1 / num2;
+    document.getElementById("resultado").innerText = division;
     return division;
 }
 
